@@ -5,7 +5,7 @@ from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 import paho.mqtt.client as mqtt
 import json
 
-client = ModbusClient(method='rtu', port='/dev/ttyS0', timeout=1, stopbits = 1, bytesize = 8,  parity='N', baudrate= 9600)
+client = ModbusClient(method='rtu', port='/dev/ttyUSB0', timeout=1, stopbits = 1, bytesize = 8,  parity='N', baudrate= 9600)
 client.connect()
 
 iot_hub = 'demo.thingsboard.io'
